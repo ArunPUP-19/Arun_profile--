@@ -21,8 +21,11 @@ export default function CinematicVideo() {
     const onLoaded = () => {
       readyRef.current = true;
       video.pause();
-      video.currentTime = 0;
     };
+
+    if (video.readyState >= 1) {
+      onLoaded();
+    }
 
     video.addEventListener("loadedmetadata", onLoaded);
     video.addEventListener("canplay", onLoaded);
@@ -62,7 +65,10 @@ export default function CinematicVideo() {
         
         if (Math.abs(targetRef.current - currentRef.current) > 0.001) {
           try {
-            video.currentTime = currentRef.current;
+            // Only update if we have enough data to seek without failing
+            if (video.readyState >= 1) {
+              video.currentTime = currentRef.current;
+            }
           } catch {}
         }
       }
