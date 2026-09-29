@@ -9,8 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--bg)",
+        bg: "var(--bg)",
+        surface: "var(--surface)",
+        text: "var(--text)",
+        accent: {
+          DEFAULT: "var(--accent-red)",
+          bright: "var(--bright-red)",
+        }
+      },
+      fontFamily: {
+        oswald: ["var(--font-oswald)", "sans-serif"],
+        syne: ["var(--font-syne)", "sans-serif"],
+        space: ["var(--font-space)", "sans-serif"],
+        mono: ["var(--font-mono)", "monospace"],
       },
     },
   },
