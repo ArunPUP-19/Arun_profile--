@@ -56,7 +56,7 @@ export default function Hero() {
             <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
           </a>
           <a
-            href="/Arun_Resume_.pdf"
+            href="/Arun_profile--/Arun_Resume_.pdf"
             target="_blank"
             className="font-mono text-sm text-text/70 hover:text-white border-b border-text/30 hover:border-white pb-1 transition-all"
             data-magnetic

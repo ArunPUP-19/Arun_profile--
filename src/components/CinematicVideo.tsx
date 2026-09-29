@@ -102,7 +102,7 @@ export default function CinematicVideo() {
           playsInline
           muted
           preload="auto"
-          src="/video/portfolio-background.mp4"
+          src="/Arun_profile--/video/portfolio-background.mp4"
         />
         
         <div className="absolute inset-0 cine-vignette" />
