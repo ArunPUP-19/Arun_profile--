@@ -1,5 +1,7 @@
 "use client";
 
+const basePath = process.env.NODE_ENV === "production" ? "/Arun_profile--" : "";
+
 export default function Hero() {
   return (
     <section className="relative w-full min-h-screen flex items-center px-6 md:px-16 pt-20">
@@ -56,7 +58,7 @@ export default function Hero() {
             <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
           </a>
           <a
-            href="/Arun_profile--/Arun_Resume_.pdf"
+            href={`${basePath}/Arun_Resume_.pdf`}
             target="_blank"
             className="font-mono text-sm text-text/70 hover:text-white border-b border-text/30 hover:border-white pb-1 transition-all"
             data-magnetic
